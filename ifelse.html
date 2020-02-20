@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h2 v-if="name">Sujon Ahmed</h2>
+        <h2 v-else-if="age">Age 23 </h2>
+        <button @click="ShowName">Name {{ name }}</button>
+        <button @click="ShowAge">Age {{ age }}</button>
+    </div>
+
+    <script>
+        var databind = new Vue({
+            el: '#app',
+            data: {
+                name: true,
+                age: true
+            },
+            methods: {
+                ShowName() {
+                    this.name = !this.name
+                },
+                ShowAge() {
+                    this.age = !this.age
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>

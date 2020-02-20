@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>I Earn {{ dollar }} $ Per Month</h2>
+        <button v-on:click="Amount(+1)">+1</button>
+        <button @click="Amount(-1)">-1</button>
+    </div>
+
+    <script>
+        var events = new Vue({
+            el: '#app',
+            data: {
+                dollar: 20
+            },
+            methods: {
+                Amount(tk) {
+                    this.dollar += tk
+                }
+            },
+        })
+    </script>
+
+    <!-- <script src="app.js"></script> -->
+</body>
+
+</html>

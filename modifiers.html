@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two way Data Binding</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h2>My Name is {{ name }}</h2>
+        <button @click.alt="Message">Alt + Click</button>
+        <button @click.shift="Message">Shift + Click</button>
+        <button @click.ctrl="Message">Ctrl + Click</button>
+        <button @click.prevent="Message">Tab + Click</button>
+    </div>
+
+    <script>
+        var databind = new Vue({
+            el: '#app',
+            data: {
+                name: 'Hello'
+            },
+            methods: {
+                Message() {
+                    console.log('Vue Js Basic')
+                }
+            },
+        })
+    </script>
+
+</body>
+
+</html>
